@@ -1,3 +1,4 @@
+
 /* --- 1. TỔNG THỂ & CĂN GIỮ --- */
 .page-wrapper.my-account {
     background-color: #f7f9fc !important;
@@ -140,6 +141,7 @@ ul.dashboard-links li a {
     border: none !important;
 }
 
+
 /* --- CẬP NHẬT: AVATAR 120PX & TÊN 20PX --- */
 
 /* Khối bao quanh căn giữa */
@@ -183,3 +185,105 @@ ul.dashboard-links li a {
 .account-user .user-id.op-5 {
     display: none !important;
 }
+
+
+
+/* 1. Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@600;700&family=League+Spartan:wght@300;400;500&display=swap');
+
+/* 2. Thiết lập khung Grid tổng thể */
+.woocommerce-EditAccountForm {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 30px !important;
+    row-gap: 15px !important;
+    font-family: 'League Spartan', sans-serif !important;
+}
+
+/* 3. THỐNG NHẤT TIÊU ĐỀ (LABELS) */
+.woocommerce-EditAccountForm label, 
+.woocommerce-EditAccountForm legend,
+.meichan-gender-group .main-label {
+    font-family: 'Kodchasan', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+    text-transform: none !important;
+}
+
+/* 4. BOX INPUT (CAO 40PX, BO TRÒN) */
+.woocommerce-EditAccountForm input.input-text,
+.woocommerce-EditAccountForm input[type="email"],
+.woocommerce-EditAccountForm input[type="password"],
+.woocommerce-EditAccountForm input[type="tel"],
+.woocommerce-EditAccountForm input[type="date"] {
+    background-color: #f1f3f5 !important;
+    border-radius: 25px !important;
+    border: none !important;
+    padding: 0 20px !important;
+    height: 40px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-family: 'League Spartan', sans-serif !important;
+}
+
+/* 5. SẮP XẾP THỨ TỰ CÁC DÒNG (Dùng Order) */
+
+/* Dòng 1: Họ và Tên (Kéo dài hết cột) */
+.woocommerce-form-row--last:has(#account_last_name) { order: 1; grid-column: 1 / 2 !important; width: 100% !important; }
+.woocommerce-form-row--first:has(#account_first_name) { order: 2; grid-column: 2 / 3 !important; width: 100% !important; }
+
+/* Dòng 2: Tên hiển thị */
+.woocommerce-form-row--wide:has(#account_display_name) { order: 3; grid-column: 1 / span 2 !important; }
+
+/* Dòng 3: SĐT và Ngày sinh (Đẩy lên trước Email) */
+.meichan-row-group { 
+    order: 4; 
+    grid-column: 1 / span 2 !important; 
+    display: grid !important; 
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 30px !important;
+    width: 100% !important;
+}
+
+/* Đảm bảo các thẻ p bên trong nhóm SĐT/Ngày sinh cũng dài 100% */
+.meichan-row-group p { width: 100% !important; }
+
+/* Dòng 4: Email */
+.woocommerce-form-row--wide:has(#account_email) { order: 5; grid-column: 1 / span 2 !important; }
+
+/* Dòng 5: Giới tính (Dưới Email) */
+.meichan-gender-group { order: 6; grid-column: 1 / span 2 !important; }
+
+/* Dòng 6: Mật khẩu và Nút lưu */
+.woocommerce-EditAccountForm fieldset legend {
+    text-transform: uppercase !important;
+}
+fieldset { order: 7; grid-column: 1 / span 2 !important; }
+.woocommerce-EditAccountForm > p:last-of-type { order: 8; grid-column: 1 / span 2 !important; }
+
+/* 6. THU NHỎ NÚT LƯU (CAM FB8B24) */
+.woocommerce-EditAccountForm .button {
+    background-color: #FB8B24 !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+    padding: 10px 35px !important;
+    font-family: 'Kodchasan', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    width: auto !important;
+    justify-self: start;
+    height: auto !important;
+}
+
+/* Fix khoảng cách Giới tính */
+.gender-selection { display: flex; gap: 40px; margin-top: 5px; }
+.gender-label { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+
+/* Reset các thẻ clear/p của Flatsome */
+.woocommerce-EditAccountForm p { margin: 0 !important; padding: 0 !important; }
+.woocommerce-EditAccountForm .clear { display: none !important; }
+#account_display_name_description { font-size: 12px; margin-top: 5px; display: block; opacity: 0.8; }
