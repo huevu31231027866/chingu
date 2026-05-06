@@ -1,0 +1,98 @@
+/* --- NHÚNG FONT CHỮ TỪ GOOGLE FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;700&family=League+Spartan:wght@400;500;600&display=swap');
+
+/* --- BỐ CỤC TỔNG THỂ --- */
+.chingu-footer-wrapper {
+    background-color: #4b2e2b; /* Màu Accent làm nền chính */
+    color: #fff6e7; /* Màu Background làm màu chữ để nổi bật */
+    font-family: 'League Spartan', sans-serif; /* Set font mặc định cho toàn bộ text là League Spartan */
+}
+
+/* --- BỐ CỤC CHÍNH (Dùng CSS Grid để chia khoảng cách chuẩn UI/UX) --- */
+.chingu-footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr; /* Cột logo to nhất, cột liên hệ to nhì, 2 cột giữa bằng nhau */
+    gap: 40px; /* Khoảng cách cố định cực đều giữa các cột */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 40px;
+}
+
+/* --- CĂN CHỈNH TỪNG CỘT --- */
+.chingu-footer-col {
+    width: 100%;
+}
+
+.chingu-footer-col p {
+    line-height: 1.6;
+    font-size: 16px; /* Tăng nhẹ size vì font League Spartan hơi nhỏ */
+    color: #fff6e7;
+    opacity: 0.9;
+    margin-bottom: 12px;
+}
+
+/* --- TIÊU ĐỀ CỘT (DÙNG KODCHASAN) --- */
+.chingu-footer-col h3 {
+    font-family: 'Kodchasan', sans-serif; /* Set font riêng cho Heading là Kodchasan */
+    color: #fb8b24; /* Màu Primary cam đất */
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* --- DANH SÁCH MENU --- */
+.chingu-footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chingu-footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.chingu-footer-col ul li a {
+    text-decoration: none;
+    color: #fff6e7;
+    font-size: 16px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng rê chuột */
+.chingu-footer-col ul li a:hover {
+    color: #ffd150; /* Sáng lên màu Secondary vàng */
+    padding-left: 5px;
+}
+
+/* --- ICON LIÊN HỆ --- */
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+/* --- DẢI COPYRIGHT BÊN DƯỚI --- */
+.chingu-footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 246, 231, 0.1);
+    padding: 20px;
+    font-size: 14px;
+    color: #fff6e7;
+    opacity: 0.7;
+}
+
+/* --- RESPONSIVE CHO ĐIỆN THOẠI --- */
+@media (max-width: 768px) {
+    .chingu-footer-container {
+        grid-template-columns: 1fr; /* Điện thoại sẽ tự xếp thành 1 cột dọc */
+        gap: 30px;
+        padding: 40px 20px;
+    }
+}
+/* --- ẨN DẢI FOOTER XÁM MẶC ĐỊNH CỦA FLATSOME --- */
+.absolute-footer {
+    display: none !important;
+}
