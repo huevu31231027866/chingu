@@ -139,3 +139,47 @@ ul.dashboard-links li a {
     text-transform: none !important;
     border: none !important;
 }
+
+/* --- CẬP NHẬT: AVATAR 120PX & TÊN 20PX --- */
+
+/* Khối bao quanh căn giữa */
+.account-user.circle {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 2px 25px 0  !important; /* Tăng padding một chút cho cân đối với ảnh to */
+}
+
+/* Khoảng cách dưới ảnh */
+.account-user .image {
+    margin-right: 0 !important; 
+    margin-bottom: 20px !important; /* Tăng khoảng cách để không dính vào tên to 20px */
+    display: inline-block;
+    position: relative; /* Giữ vị trí cho nút cam sau này */
+}
+
+/* Avatar khủng 120px */
+.account-user img.avatar {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px !important; /* Chặn theme bóp nhỏ ảnh */
+    border: 4px solid #fff; /* Viền dày hơn tí cho khớp với ảnh to */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08); /* Đổ bóng sâu hơn cho sang */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+
+/* Tên User 20px */
+.account-user .user-name {
+    font-size: 20px !important; /* Đã nâng cấp lên 20px */
+    font-weight: 700;
+    color: #333;
+    display: block !important;
+    margin: 0 !important;
+    line-height: 1.3;
+}
+
+/* Xóa triệt để dấu #1 */
+.account-user .user-id.op-5 {
+    display: none !important;
+}
