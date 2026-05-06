@@ -1,3 +1,4 @@
+/* GIỮ NGUYÊN TOÀN BỘ CODE CŨ CỦA BẠN Ở ĐÂY */
 
 /* --- 1. TỔNG THỂ & CĂN GIỮ --- */
 .page-wrapper.my-account {
@@ -25,10 +26,9 @@
     border-radius: 20px !important;
     padding: 25px 15px !important;
     box-shadow: 0 5px 20px rgba(0,0,0,0.03) !important;
-    border: none !important; /* Xóa line dọc giữa 2 cột */
+    border: none !important;
 }
 
-/* Tên User - Fix 16px */
 .account-user .user-name {
     font-size: 16px !important; 
     font-weight: 700;
@@ -36,7 +36,6 @@
     color: #333;
 }
 
-/* Menu điều hướng */
 #my-account-nav {
     margin-top: 25px !important;
     border: none !important;
@@ -48,7 +47,7 @@
 }
 
 #my-account-nav li a {
-    font-size: 16px !important; /* Fix 16px theo yêu cầu */
+    font-size: 16px !important;
     font-weight: 600;
     color: #555;
     padding: 10px 22px !important; 
@@ -63,8 +62,6 @@
     transition: all 0.3s;
 }
 
-/* --- XỬ LÝ TRIỆT ĐỂ VẠCH XANH & LINE --- */
-/* Xóa tất cả các lớp giả tạo ra vạch xanh của Flatsome */
 #my-account-nav li a::after,
 #my-account-nav li a::before,
 #my-account-nav li.active a::after,
@@ -77,12 +74,11 @@
     width: 0 !important;
 }
 
-/* Trạng thái Active - Màu cam nhạt */
 #my-account-nav li.active a,
 #my-account-nav li.is-active a {
     background-color: #fff0e5 !important;
     color: #e67e22 !important;
-    border: none !important; /* Đảm bảo không có viền trái/phải */
+    border: none !important;
 }
 
 /* --- 3. NỘI DUNG (BÊN PHẢI) --- */
@@ -95,10 +91,9 @@
     border: none !important;
 }
 
-/* Tiêu đề & Nội dung mô tả - Fix 16px */
 .woocommerce-MyAccount-content h3,
 .woocommerce-MyAccount-content::before {
-    font-size: 18px !important; /* Tiêu đề lớn hơn 1 chút để nổi bật */
+    font-size: 18px !important;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -106,7 +101,7 @@
 .woocommerce-MyAccount-content p,
 .woocommerce-MyAccount-content span,
 .woocommerce-MyAccount-content label {
-    font-size: 16px !important; /* Fix 16px */
+    font-size: 16px !important;
     color: #666;
     line-height: 1.6;
 }
@@ -123,13 +118,12 @@ ul.dashboard-links li a {
     height: 65px !important; 
     background-color: #f8f9fa !important;
     border-radius: 12px !important;
-    font-size: 16px !important; /* Fix 16px */
+    font-size: 16px !important;
     font-weight: 700;
     border: 1px solid #eee !important;
     text-align: center;
 }
 
-/* Nút bấm Save Changes - Fix 16px */
 .woocommerce-MyAccount-content a.button, 
 .woocommerce form .form-row button.button {
     background-color: #f68c1f !important;
@@ -141,39 +135,32 @@ ul.dashboard-links li a {
     border: none !important;
 }
 
-
-/* --- CẬP NHẬT: AVATAR 120PX & TÊN 20PX --- */
-
-/* Khối bao quanh căn giữa */
 .account-user.circle {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-    padding: 2px 25px 0  !important; /* Tăng padding một chút cho cân đối với ảnh to */
+    padding: 2px 25px 0  !important;
 }
 
-/* Khoảng cách dưới ảnh */
 .account-user .image {
     margin-right: 0 !important; 
-    margin-bottom: 20px !important; /* Tăng khoảng cách để không dính vào tên to 20px */
+    margin-bottom: 20px !important;
     display: inline-block;
-    position: relative; /* Giữ vị trí cho nút cam sau này */
+    position: relative;
 }
 
-/* Avatar khủng 120px */
 .account-user img.avatar {
     width: 120px !important;
     height: 120px !important;
-    max-width: 120px !important; /* Chặn theme bóp nhỏ ảnh */
-    border: 4px solid #fff; /* Viền dày hơn tí cho khớp với ảnh to */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08); /* Đổ bóng sâu hơn cho sang */
-    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    max-width: 120px !important;
+    border: 4px solid #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    object-fit: cover;
 }
 
-/* Tên User 20px */
 .account-user .user-name {
-    font-size: 20px !important; /* Đã nâng cấp lên 20px */
+    font-size: 20px !important;
     font-weight: 700;
     color: #333;
     display: block !important;
@@ -181,17 +168,12 @@ ul.dashboard-links li a {
     line-height: 1.3;
 }
 
-/* Xóa triệt để dấu #1 */
 .account-user .user-id.op-5 {
     display: none !important;
 }
 
-
-
-/* 1. Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@600;700&family=League+Spartan:wght@300;400;500&display=swap');
 
-/* 2. Thiết lập khung Grid tổng thể */
 .woocommerce-EditAccountForm {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
@@ -200,7 +182,6 @@ ul.dashboard-links li a {
     font-family: 'League Spartan', sans-serif !important;
 }
 
-/* 3. THỐNG NHẤT TIÊU ĐỀ (LABELS) */
 .woocommerce-EditAccountForm label, 
 .woocommerce-EditAccountForm legend,
 .meichan-gender-group .main-label {
@@ -213,7 +194,6 @@ ul.dashboard-links li a {
     text-transform: none !important;
 }
 
-/* 4. BOX INPUT (CAO 40PX, BO TRÒN) */
 .woocommerce-EditAccountForm input.input-text,
 .woocommerce-EditAccountForm input[type="email"],
 .woocommerce-EditAccountForm input[type="password"],
@@ -229,16 +209,10 @@ ul.dashboard-links li a {
     font-family: 'League Spartan', sans-serif !important;
 }
 
-/* 5. SẮP XẾP THỨ TỰ CÁC DÒNG (Dùng Order) */
-
-/* Dòng 1: Họ và Tên (Kéo dài hết cột) */
 .woocommerce-form-row--last:has(#account_last_name) { order: 1; grid-column: 1 / 2 !important; width: 100% !important; }
 .woocommerce-form-row--first:has(#account_first_name) { order: 2; grid-column: 2 / 3 !important; width: 100% !important; }
-
-/* Dòng 2: Tên hiển thị */
 .woocommerce-form-row--wide:has(#account_display_name) { order: 3; grid-column: 1 / span 2 !important; }
 
-/* Dòng 3: SĐT và Ngày sinh (Đẩy lên trước Email) */
 .meichan-row-group { 
     order: 4; 
     grid-column: 1 / span 2 !important; 
@@ -248,23 +222,16 @@ ul.dashboard-links li a {
     width: 100% !important;
 }
 
-/* Đảm bảo các thẻ p bên trong nhóm SĐT/Ngày sinh cũng dài 100% */
 .meichan-row-group p { width: 100% !important; }
-
-/* Dòng 4: Email */
 .woocommerce-form-row--wide:has(#account_email) { order: 5; grid-column: 1 / span 2 !important; }
-
-/* Dòng 5: Giới tính (Dưới Email) */
 .meichan-gender-group { order: 6; grid-column: 1 / span 2 !important; }
 
-/* Dòng 6: Mật khẩu và Nút lưu */
 .woocommerce-EditAccountForm fieldset legend {
     text-transform: uppercase !important;
 }
 fieldset { order: 7; grid-column: 1 / span 2 !important; }
 .woocommerce-EditAccountForm > p:last-of-type { order: 8; grid-column: 1 / span 2 !important; }
 
-/* 6. THU NHỎ NÚT LƯU (CAM FB8B24) */
 .woocommerce-EditAccountForm .button {
     background-color: #FB8B24 !important;
     color: #fff !important;
@@ -279,11 +246,63 @@ fieldset { order: 7; grid-column: 1 / span 2 !important; }
     height: auto !important;
 }
 
-/* Fix khoảng cách Giới tính */
 .gender-selection { display: flex; gap: 40px; margin-top: 5px; }
 .gender-label { display: flex; align-items: center; gap: 8px; font-weight: 500; }
-
-/* Reset các thẻ clear/p của Flatsome */
 .woocommerce-EditAccountForm p { margin: 0 !important; padding: 0 !important; }
 .woocommerce-EditAccountForm .clear { display: none !important; }
 #account_display_name_description { font-size: 12px; margin-top: 5px; display: block; opacity: 0.8; }
+
+/* --- PHẦN MỚI THÊM: RESPONSIVE CHO MỌI THIẾT BỊ --- */
+
+@media (max-width: 850px) {
+    /* Chuyển Layout từ ngang sang dọc */
+    .page-wrapper.my-account .row.vertical-tabs {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Sidebar và Content chiếm 100% chiều rộng */
+    .large-3.col.col-border, 
+    .large-9.col {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Menu căn giữa trên mobile */
+    #my-account-nav li a {
+        width: 100% !important;
+        justify-content: center;
+        min-width: unset !important;
+    }
+
+    /* Chuyển Grid Form về 1 cột */
+    .woocommerce-EditAccountForm, 
+    .meichan-row-group, 
+    ul.dashboard-links {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    /* Đưa các ô input chiếm hết chiều ngang */
+    .woocommerce-form-row--last:has(#account_last_name),
+    .woocommerce-form-row--first:has(#account_first_name) {
+        grid-column: 1 / span 1 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Padding nhỏ lại cho điện thoại nhỏ */
+    .large-9.col {
+        padding: 20px !important;
+    }
+    
+    .gender-selection {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    ul.dashboard-links li a {
+        font-size: 14px !important;
+    }
+}
