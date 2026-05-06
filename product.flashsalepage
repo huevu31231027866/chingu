@@ -1,0 +1,70 @@
+/* 1. Tiêu đề dẫn nhập */
+.food-section-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #44261c;
+    margin-bottom: 20px;
+}
+
+/* 2. Khung thẻ sản phẩm tổng thể */
+.food-grid-custom .product-small.box {
+    border-radius: 25px !important; /* Bo góc khung ngoài */
+    background-color: #fff !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+    border: none !important;
+    overflow: hidden !important;
+    transition: transform 0.3s ease;
+}
+
+/* 3. TỈ LỆ HÌNH ẢNH VÀ BO GÓC HÌNH (Sửa tại đây) */
+.food-grid-custom .box-image {
+    padding: 15px 15px 5px 15px !important; /* Tạo khoảng trống xung quanh */
+}
+
+/* Bo góc khung chứa ảnh */
+.food-grid-custom .box-image .image-cover {
+    padding-top: 52% !important; /* Tỉ lệ ảnh nhỏ gọn */
+    border-radius: 20px !important; /* Bo góc khung ảnh */
+    overflow: hidden !important;
+}
+
+/* Bo góc trực tiếp vào thẻ img */
+.food-grid-custom .box-image img {
+    border-radius: 20px !important; /* Đảm bảo hình ảnh thực tế cũng được bo góc */
+    object-fit: cover !important;
+}
+
+/* 4. Phần thông tin (Tên & Giá) */
+.food-grid-custom .box-text {
+    padding: 10px 20px 20px 20px !important;
+    text-align: left !important;
+}
+
+.food-grid-custom .product-title a {
+    font-size: 1.15em !important;
+    font-weight: bold !important;
+    color: #44261c !important;
+}
+
+.food-grid-custom .price {
+    font-size: 1.25em !important;
+    font-weight: 800 !important;
+    color: #44261c !important;
+}
+
+/* 5. Dọn dẹp các thành phần thừa */
+.food-grid-custom .quick-view,
+.food-grid-custom .wishlist-button,
+.food-grid-custom .category,
+.food-grid-custom .add-to-cart-button,
+.food-grid-custom .box-image .image-tools {
+    display: none !important;
+}
+
+/* Đảm bảo các khung bằng hàng nhau */
+.food-grid-custom .box-text-inner {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
