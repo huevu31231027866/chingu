@@ -317,6 +317,7 @@ fieldset { order: 7; grid-column: 1 / span 2 !important; }
         gap: 15px;
     }
 }
+
 /* --- CUSTOM BILLING ADDRESS ĐỒNG BỘ 100% --- */
 .woocommerce-address-fields__field-wrapper {
     display: grid !important;
@@ -388,7 +389,84 @@ button[name="save_address"] {
     line-height: 40px !important;
     padding-left: 0 !important;
 }
+ /*DASHBOARD*/
+/* Container chính - Ép 2 cột cố định */
+ul.dashboard-links {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Chia 2 cột bằng nhau để ô dài ra */
+    column-gap: 20px !important; /* Khoảng cách giữa 2 ô */
+    row-gap: 15px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 30px 0 !important;
+}
 
+/* Định dạng từng ô LI */
+ul.dashboard-links li {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+/* Định dạng thẻ Link (A) - Bo góc 25px và kéo dài */
+ul.dashboard-links li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #f1f3f5 !important; /* Màu nền xám nhạt */
+    color: #333 !important;
+    
+    width: 100% !important;
+    min-height: 60px !important; /* Độ cao thanh mảnh giúp ô trông dài hơn */
+    padding: 15px !important;
+    
+    border-radius: 25px !important; /* Bo góc 25px chuẩn */
+    
+    font-family: 'Kodchasan', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    box-sizing: border-box !important;
+}
+
+/* Ô lẻ (như Wishlist) sẽ nằm bên trái thay vì dãn hết hàng */
+ul.dashboard-links li:last-child:nth-child(odd) {
+    grid-column: 1 / 2 !important;
+}
+
+/* Hiệu ứng Hover màu cam thương hiệu */
+ul.dashboard-links li a:hover {
+    background-color: #FB8B24 !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+
+/* 1. Ẩn Wishlist ở menu dọc bên trái (Sidebar) */
+#my-account-nav li.wishlist-account-element {
+    display: none !important;
+}
+
+/* 2. Ẩn Wishlist ở bảng các ô nội dung giữa màn hình */
+ul.dashboard-links li.wishlist-account-element {
+    display: none !important;
+}
+
+/* 3. Đảm bảo ẩn sạch các class liên quan khác (nếu có) */
+.woocommerce-MyAccount-navigation-link--wishlist,
+.woocommerce-MyAccount-navigation-link--yith-wishlist {
+    display: none !important;
+}
+/* Ẩn mục Wishlist trong dropdown header của Flatsome */
+.nav-dropdown .wishlist-account-element,
+.nav-dropdown [class*="wishlist"] {
+    display: none !important;
+}
+
+/* Ẩn luôn dấu gạch ngang phân cách (nếu có) ngay sau mục Wishlist */
+.nav-dropdown .wishlist-account-element + li.divider {
+    display: none !important;
+}
 /* --- PHẦN MỚI THÊM: RESPONSIVE CHO MỌI THIẾT BỊ --- */
 
 @media (max-width: 850px) {
