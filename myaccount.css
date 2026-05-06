@@ -1,4 +1,4 @@
-/* GIỮ NGUYÊN TOÀN BỘ CODE CŨ CỦA BẠN Ở ĐÂY */
+/* CUSTOM ACCOUNT */
 
 /* --- 1. TỔNG THỂ & CĂN GIỮ --- */
 .page-wrapper.my-account {
@@ -171,7 +171,7 @@ ul.dashboard-links li a {
 .account-user .user-id.op-5 {
     display: none !important;
 }
-
+/* CUSTOM ACCOUNT DETAILS */
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@600;700&family=League+Spartan:wght@300;400;500&display=swap');
 
 .woocommerce-EditAccountForm {
@@ -251,6 +251,72 @@ fieldset { order: 7; grid-column: 1 / span 2 !important; }
 .woocommerce-EditAccountForm p { margin: 0 !important; padding: 0 !important; }
 .woocommerce-EditAccountForm .clear { display: none !important; }
 #account_display_name_description { font-size: 12px; margin-top: 5px; display: block; opacity: 0.8; }
+
+/* --- CUSTOM ADDRESS--- */
+/* --- CUSTOM BOX ADDRESS--- */
+
+.woocommerce-Address {
+    background: #ffffff !important;
+    border: 2px dashed #d1d8e0 !important; 
+    border-radius: 16px !important;
+    padding: 40px !important; /* Tăng padding để box nhìn thoáng hơn */
+    width: 100% !important;   /* Kéo dài full chiều rộng cột phải */
+    max-width: 100% !important; /* Loại bỏ giới hạn hẹp */
+    transition: all 0.3s ease;
+    position: relative;
+    box-sizing: border-box !important;
+}
+
+/* Căn chỉnh header trong box */
+.woocommerce-Address-title.title {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px !important;
+    border-bottom: 1px solid #f1f3f5;
+    padding-bottom: 20px;
+}
+
+.woocommerce-Address-title h2 {
+    font-family: 'Kodchasan', sans-serif !important;
+    font-size: 22px !important; /* Tăng nhẹ kích thước font cho hợp với box rộng */
+    font-weight: 700 !important;
+    color: #333 !important;
+}
+
+/* Nút Add/Edit bên phải */
+.woocommerce-Address-title .edit {
+    background-color: #FB8B24 !important;
+    color: #fff !important;
+    font-family: 'Kodchasan', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    padding: 10px 25px !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    white-space: nowrap; /* Tránh chữ bị xuống hàng */
+}
+
+/* Phần nội dung địa chỉ bên dưới */
+.woocommerce-Address address {
+    font-family: 'League Spartan', sans-serif !important;
+    font-size: 17px !important;
+    color: #999 !important;
+    font-style: normal !important;
+    margin-top: 15px;
+}
+/* Responsive cho điện thoại */
+@media (max-width: 600px) {
+    .woocommerce-Address {
+        padding: 25px !important;
+    }
+    
+    .woocommerce-Address-title.title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
 
 /* --- PHẦN MỚI THÊM: RESPONSIVE CHO MỌI THIẾT BỊ --- */
 
