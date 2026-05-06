@@ -6,8 +6,7 @@ function custom_final_menu_reorder( $items ) {
         'edit-account'    => 'Tài khoản',            
         'orders'          => 'Đơn hàng',             
         'edit-address'    => 'Địa chỉ',              
-        'payment-methods' => 'Phương thức thanh toán', 
-          
+        'payment-methods' => 'Phương thức thanh toán',        
     );
 
     return $new_items;
