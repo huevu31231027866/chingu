@@ -317,6 +317,77 @@ fieldset { order: 7; grid-column: 1 / span 2 !important; }
         gap: 15px;
     }
 }
+/* --- CUSTOM BILLING ADDRESS ĐỒNG BỘ 100% --- */
+.woocommerce-address-fields__field-wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Chia 2 cột */
+    column-gap: 30px !important;
+    row-gap: 15px !important;
+    font-family: 'League Spartan', sans-serif !important;
+}
+
+/* Style cho Label (Giống mẫu bạn gửi) */
+.woocommerce-address-fields label {
+    font-family: 'Kodchasan', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+    text-transform: none !important;
+}
+
+/* Style cho Input & Select (Màu #f1f3f5, Bo góc 25px) */
+.woocommerce-address-fields input.input-text,
+.woocommerce-address-fields select,
+.woocommerce-address-fields .select2-container--default .select2-selection--single {
+    background-color: #f1f3f5 !important;
+    border-radius: 25px !important;
+    border: none !important;
+    padding: 0 20px !important;
+    height: 40px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-family: 'League Spartan', sans-serif !important;
+}
+
+/* --- THỨ TỰ HIỂN THỊ (ORDER) --- */
+#billing_first_name_field { order: 1; grid-column: 1 / 2 !important; width: 100% !important; } /* Tên */
+#billing_last_name_field  { order: 2; grid-column: 2 / 3 !important; width: 100% !important;} /* Họ */
+#billing_country_field    { order: 3; grid-column: 1 / span 2 !important; } /* Quốc gia */
+#billing_city_field       { order: 4; grid-column: 1 / span 2 !important; } /* Thành phố */
+#billing_postcode_field   { order: 5; grid-column: 1 / span 2 !important; } /* Quận/Huyện */
+#billing_address_1_field  { order: 6; grid-column: 1 / span 2 !important;width: 100% !important; } /* Địa chỉ */
+#billing_phone_field      { order: 7; grid-column !important; width: 100% !important; } /* SĐT */
+#billing_email_field      { order: 8; grid-column: 1 / span 2 !important; } /* Email */
+
+/* --- NÚT BẤM (Đồng bộ với EditAccountForm button) --- */
+button[name="save_address"] {
+    background-color: #FB8B24 !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+    padding: 10px 35px !important;
+    font-family: 'Kodchasan', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    width: auto !important;
+    cursor: pointer;
+    margin-top: 10px;
+    height: auto !important;
+}
+
+/* Xử lý các thẻ p mặc định của WC để không làm lệch Grid */
+.woocommerce-address-fields__field-wrapper p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Fix chiều cao ô Select của WC */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 40px !important;
+    padding-left: 0 !important;
+}
 
 /* --- PHẦN MỚI THÊM: RESPONSIVE CHO MỌI THIẾT BỊ --- */
 
