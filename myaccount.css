@@ -1,0 +1,141 @@
+/* --- 1. TỔNG THỂ & CĂN GIỮ --- */
+.page-wrapper.my-account {
+    background-color: #f7f9fc !important;
+    padding: 30px 0;
+}
+
+.page-wrapper.my-account .container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+.page-wrapper.my-account .row.vertical-tabs {
+    display: flex !important;
+    justify-content: center;
+    gap: 25px;
+    margin: 0 !important;
+}
+
+/* --- 2. SIDEBAR (BÊN TRÁI) --- */
+.large-3.col.col-border {
+    flex: 0 0 280px !important;
+    background: #fff !important;
+    border-radius: 20px !important;
+    padding: 25px 15px !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03) !important;
+    border: none !important; /* Xóa line dọc giữa 2 cột */
+}
+
+/* Tên User - Fix 16px */
+.account-user .user-name {
+    font-size: 16px !important; 
+    font-weight: 700;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Menu điều hướng */
+#my-account-nav {
+    margin-top: 25px !important;
+    border: none !important;
+}
+
+#my-account-nav li {
+    margin-bottom: 6px;
+    border: none !important;
+}
+
+#my-account-nav li a {
+    font-size: 16px !important; /* Fix 16px theo yêu cầu */
+    font-weight: 600;
+    color: #555;
+    padding: 10px 22px !important; 
+    border-radius: 50px !important; 
+    text-transform: none !important;
+    display: flex;
+    align-items: center;
+    border: none !important;
+    width: fit-content;
+    min-width: 200px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* --- XỬ LÝ TRIỆT ĐỂ VẠCH XANH & LINE --- */
+/* Xóa tất cả các lớp giả tạo ra vạch xanh của Flatsome */
+#my-account-nav li a::after,
+#my-account-nav li a::before,
+#my-account-nav li.active a::after,
+#my-account-nav li.is-active a::after,
+.nav-vertical > li > a::after,
+.nav-sidebar li a::after {
+    display: none !important;
+    content: none !important;
+    border: none !important;
+    width: 0 !important;
+}
+
+/* Trạng thái Active - Màu cam nhạt */
+#my-account-nav li.active a,
+#my-account-nav li.is-active a {
+    background-color: #fff0e5 !important;
+    color: #e67e22 !important;
+    border: none !important; /* Đảm bảo không có viền trái/phải */
+}
+
+/* --- 3. NỘI DUNG (BÊN PHẢI) --- */
+.large-9.col {
+    flex: 0 0 720px !important;
+    background: #fff !important;
+    border-radius: 20px !important;
+    padding: 35px !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03) !important;
+    border: none !important;
+}
+
+/* Tiêu đề & Nội dung mô tả - Fix 16px */
+.woocommerce-MyAccount-content h3,
+.woocommerce-MyAccount-content::before {
+    font-size: 18px !important; /* Tiêu đề lớn hơn 1 chút để nổi bật */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.woocommerce-MyAccount-content p,
+.woocommerce-MyAccount-content span,
+.woocommerce-MyAccount-content label {
+    font-size: 16px !important; /* Fix 16px */
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- 4. Ô CHỨC NĂNG DẠNG GRID --- */
+ul.dashboard-links {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 0 !important;
+}
+
+ul.dashboard-links li a {
+    height: 65px !important; 
+    background-color: #f8f9fa !important;
+    border-radius: 12px !important;
+    font-size: 16px !important; /* Fix 16px */
+    font-weight: 700;
+    border: 1px solid #eee !important;
+    text-align: center;
+}
+
+/* Nút bấm Save Changes - Fix 16px */
+.woocommerce-MyAccount-content a.button, 
+.woocommerce form .form-row button.button {
+    background-color: #f68c1f !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    padding: 12px 35px !important;
+    border-radius: 10px !important;
+    text-transform: none !important;
+    border: none !important;
+}
