@@ -605,3 +605,145 @@ ul.dashboard-links li.wishlist-account-element {
         font-size: 14px !important;
     }
 }
+
+/*CUSTOM ORDER TABLE*/
+.woocommerce-order-details__title, 
+.woocommerce-column__title {
+    font-family: 'Kodchasan', sans-serif !important; /* Title font Kodchasan */
+    font-size: 22px !important;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+	 color: #FB8B24; 
+}
+
+
+/* 2. Custom dòng thông báo đầu trang (Dùng mark) */
+
+mark.order-number, mark.order-date, mark.order-status {
+    background: transparent;
+    color: #ef8c2b; /* Màu cam chủ đạo */
+    font-weight: 700;
+}
+
+/* 3. Bảng Chi tiết đơn hàng */
+.shop_table.order_details {
+    border: none !important;
+    width: 100%;
+padding-bottom: 15px;
+	
+}
+
+.shop_table.order_details thead th {
+    font-family: 'Kodchasan', sans-serif !important;
+    background: transparent;
+    border-bottom: 2px solid #eee !important;
+	font-size: 16px !important;
+    padding: 15px 0 10px 10px!important;
+	color: #000; 
+
+}
+
+.shop_table.order_details tbody td {
+    padding: 20px 0 10px 10px!important;
+    border-bottom: 1px solid #eee !important;
+	font-size: 16px !important;
+}
+
+/* Fix màu symbol cùng màu với giá tiền */
+.amount, .woocommerce-Price-currencySymbol {
+    color: #ef8c2b !important;
+    font-weight: 700;
+}
+
+/* 4. Custom Footer bảng (Phần Tổng cộng) */
+.shop_table tfoot th {
+    text-align: left;
+    font-weight: 400;
+    padding: 20px 0 10px 10px !important;
+    border: none !important;
+	font-size: 16px !important;
+	color: #000; 
+}
+
+.shop_table tfoot td {
+    text-align: right;
+    padding: 10px 0 !important;
+    border: none !important;
+	font-size: 16px !important;
+	color: #5A5A5A ; 
+}
+
+.shop_table tfoot tr:nth-child(2) th, 
+.shop_table tfoot tr:nth-child(2) td {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+/* 5. Địa chỉ thanh toán */
+.woocommerce-column__title{
+	padding-top:15px;
+	padding-bottom: 15px;
+}
+.woocommerce-customer-details address {
+    font-style: normal !important;
+    line-height: 1.8;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 12px;
+    color: #5A5A5A ;
+}
+
+.woocommerce-customer-details--phone, 
+.woocommerce-customer-details--email {
+    margin: 5px 0 0 0 !important;
+    font-weight: 500;
+}
+
+/* 6. Responsive */
+@media (max-width: 600px) {
+    .shop_table thead {
+     display: table-header-group !important;
+    }
+	.shop_table.order_details tbody td {display: table-header-group !important;}
+    
+    .shop_table.order_details td {
+        display: block;
+        text-align: right;
+        padding: 10px 0 !important;
+    }
+    
+    .shop_table.order_details td::before {
+        content: attr(data-title);
+        float: left;
+        font-weight: 700;
+    }
+}
+
+/* 3. Bảng Chi tiết đơn hàng - Fix thẳng hàng */
+.shop_table.order_details {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Ép tên sản phẩm và giá tiền luôn nằm trên 1 dòng */
+.shop_table.order_details tbody tr {
+    display: table-row !important; /* Trả về đúng bản chất hàng của table */
+}
+
+.shop_table.order_details td.product-name {
+    text-align: left !important;
+    display: table-cell !important; /* Trả về đúng bản chất ô của table */
+}
+
+.shop_table.order_details td.product-total {
+    text-align: right !important;
+    display: table-cell !important;
+    white-space: nowrap; /* Ép giá tiền không được xuống dòng */
+}
+
+/* Khử hoàn toàn cái ::before gây rớt dòng ở Responsive cũ của m */
+.shop_table.order_details td::before {
+    display: none !important;
+    content: none !important;
+}
