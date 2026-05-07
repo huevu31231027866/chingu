@@ -4,12 +4,15 @@
     font-family: 'League Spartan', sans-serif !important;
     font-size: 18px !important;
 }
-
 #customer_login label, 
 #customer_login p {
     font-size: 18px !important;
 }
-
+.account-register-inner h2.uppercase.h3 {
+    color: #000 !important;
+    font-weight: 700 !important; 
+	
+}
 /* 2. Reset background vuông và chỉ bo khung nội dung bên trong */
 
 /* Ép các khối cột và background về hình vuông */
@@ -36,7 +39,7 @@
 #customer_login .account-register-inner:not(.dark) label,
 #customer_login .account-register-inner:not(.dark) p,
 #customer_login .account-register-inner:not(.dark) .woocommerce-privacy-policy-text {
-    color: #333333 !important;
+    color: #000 !important;
 }
 
 /* 3. Thu nhỏ các nút bấm (Button) */
@@ -64,13 +67,17 @@
     color: #ffffff !important;
 }
 
-/* 4. Tùy chỉnh màu chữ thống nhất #333333 */
-.account-login-inner h2, 
-.account-login-inner label,
-.account-login-inner p {
-    color: #333333 !important;
+/* 4. Tùy chỉnh màu chữ thống nhất */
+.account-login-inner label,{
+    color: #000 !important;
 }
-
+.account-login-inner p {
+    color: #333 !important;
+}
+.account-login-inner h2.uppercase.h3 {
+    color: #000 !important;
+    font-weight: 700 !important; 
+}
 /* 5. Bo nhẹ các ô nhập liệu (Input) cho thanh mảnh */
 #customer_login .input-text {
     border-radius: 10px !important;
