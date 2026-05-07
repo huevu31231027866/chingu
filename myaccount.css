@@ -467,6 +467,90 @@ ul.dashboard-links li.wishlist-account-element {
 .nav-dropdown .wishlist-account-element + li.divider {
     display: none !important;
 }
+/* CUSTOM ORDER TAB */
+/* 1. Font title sang Kodchasan */
+.woocommerce-orders-table__header span {
+    font-family: 'Kodchasan', sans-serif !important;
+}
+
+/* 2. Font body lên 16px (áp dụng cho các ô nội dung) */
+.woocommerce-orders-table__cell {
+    font-size: 16px !important;
+}
+
+/* 1. Tổng thể bảng - Cho thoáng đãng hơn */
+.woocommerce-orders-table {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.woocommerce-orders-table thead {
+    display: table-header-group; /* Đảm bảo hiện header */
+}
+
+.woocommerce-orders-table__header {
+    background: transparent !important;
+    border-bottom: 2px solid #f1f1f1 !important;
+    padding: 15px 10px !important;
+}
+
+/* 2. Style từng dòng đơn hàng */
+.woocommerce-orders-table__row {
+    transition: background 0.3s ease;
+}
+
+.woocommerce-orders-table__row:hover {
+    background-color: #fafafa !important;
+}
+
+.woocommerce-orders-table__cell {
+    padding: 20px 10px 5px  !important;
+    border-bottom: 1px solid #eee !important;
+    vertical-align: middle !important;
+    color: #555;
+}
+
+/* 3. Fix lỗi dính chữ ở cột Tổng (Total) */
+.woocommerce-orders-table__cell-order-total {
+    font-size: 15px;
+    color: #777;
+}
+
+.woocommerce-orders-table__cell-order-total .amount {
+    color: #ef8c2b; /* Màu cam thương hiệu của bạn */
+    font-weight: 700;
+    font-size: 17px;
+    margin-right: 4px; /* Khoảng cách với chữ 'cho x mục' */
+}
+.woocommerce-orders-table__cell-order-total .woocommerce-Price-currencySymbol {
+    color: #ef8c2b !important;
+}
+
+/* 4. Custom Trạng thái (Status) cho chuyên nghiệp */
+.woocommerce-orders-table__cell-order-status {
+    font-weight: 600;
+    color: #2ecc71 !important; /* Mặc định màu xanh cho dễ nhìn */
+}
+
+/* 3. Custom nút: bo 30px, hẹp hơn 5px mỗi bên */
+.woocommerce-orders-table__cell-order-actions .button.view {
+    border-radius: 30px !important;
+    /* Giảm padding-left và padding-right xuống 5px so với bản cũ (từ 20px xuống 15px) */
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    
+    /* Giữ nguyên các thuộc tính cũ */
+    background-color: #ef8c2b !important;
+    color: #fff !important;
+    border: none !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    display: inline-block;
+}
+
+
 /* --- PHẦN MỚI THÊM: RESPONSIVE CHO MỌI THIẾT BỊ --- */
 
 @media (max-width: 850px) {
