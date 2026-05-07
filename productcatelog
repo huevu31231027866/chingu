@@ -1,3 +1,4 @@
+/product/
 /* --- BIẾN NÚT ADD TO CART THÀNH DẤU CỘNG VÀNG CAM XÀI ĐƯỢC --- */
 
 
@@ -35,10 +36,18 @@
     padding: 10px 25px 30px 25px !important;
     text-align: left !important;
 }
-
-/* Xóa các icon xe hàng cũ hoặc rác của Flatsome */
-.product-small.box .wishlist-button, {
-    display: none !important;
-}
 /quickview/
-   border-radius: 0 0 30px 30px !important; /* Bo góc dưới trái và dưới phải 30px */
+/* Ép khung công cụ của ảnh thụt vào 15px mỗi bên */
+.product-small.box .box-image .image-tools {
+    left: 15px !important; 
+    right: 15px !important;
+    width: auto !important; /* Để nó tự co theo lề trái/phải đã set */
+}
+
+/* Giữ bo góc cho nút */
+.product-small.box .quick-view {
+    border-radius: 0 0 30px 30px !important;
+	 max-width: calc(100% - 30px) !important; /* Ép chiều ngang tối đa bằng ảnh */
+    left: 50% !important;                    /* Đưa về chính giữa */
+    transform: translateX(-30%) !important;  /* Giữ nút luôn cân xứng */
+}
