@@ -1,4 +1,4 @@
-/* TỔNG THỂ KHUNG FORM */
+/* CUSTOM CONTACT FORM */
 .form-flat {
     max-width: 600px; /* Giới hạn độ rộng để form không bị bè */
     margin: 0 auto;
@@ -12,7 +12,7 @@
 .form-flat textarea {
     width: 100% !important;
     border: 1px solid #e2e8f0 !important; /* Màu viền xám nhạt hiện đại */
-    background-color: #f8fafc !important; /* Nền xám cực nhẹ để dịu mắt */
+    background-color: #F1F3F4 !important; /* Nền xám cực nhẹ để dịu mắt */
     padding: 12px 16px !important;
     border-radius: 8px !important; /* Bo góc mượt */
     font-size: 15px !important;
