@@ -1,0 +1,67 @@
+/* TỔNG THỂ KHUNG FORM */
+.form-flat {
+    max-width: 600px; /* Giới hạn độ rộng để form không bị bè */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* STYLE CHUNG CHO CÁC Ô NHẬP LIỆU */
+.form-flat input[type="text"],
+.form-flat input[type="tel"],
+.form-flat input[type="email"],
+.form-flat textarea {
+    width: 100% !important;
+    border: 1px solid #e2e8f0 !important; /* Màu viền xám nhạt hiện đại */
+    background-color: #f8fafc !important; /* Nền xám cực nhẹ để dịu mắt */
+    padding: 12px 16px !important;
+    border-radius: 8px !important; /* Bo góc mượt */
+    font-size: 15px !important;
+    color: #333 !important; /* Đã cập nhật màu chữ body thành #333 */
+    transition: all 0.2s ease-in-out !important;
+    margin-bottom: 20px !important; /* Khoảng cách giữa các ô */
+    box-shadow: none !important;
+}
+
+/* HIỆU ỨNG KHI CLICK VÀO Ô (FOCUS) */
+.form-flat input:focus,
+.form-flat textarea:focus {
+    background-color: #fff !important;
+    border-color: #fb8b24 !important; /* Màu cam thương hiệu của m */
+    box-shadow: 0 0 0 4px rgba(251, 139, 36, 0.1) !important; /* Hiệu ứng đổ bóng nhẹ quanh viền */
+    color: #333 !important; /* Đảm bảo khi gõ vẫn là màu #333 */
+    outline: none !important;
+}
+
+/* RIÊNG CHO TEXTAREA (Ô TIN NHẮN) */
+.form-flat textarea {
+    height: 150px !important;
+    line-height: 1.6 !important;
+    resize: vertical; /* Chỉ cho phép kéo giãn theo chiều dọc */
+}
+
+/* NÚT SUBMIT */
+.form-flat .button.primary {
+    width: 100% !important;
+    background-color: #fb8b24 !important; /* Màu cam đồng bộ */
+    border: none !important;
+    padding: 14px 0 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.form-flat .button.primary:hover {
+    background-color: #e67a1d !important;
+    transform: translateY(-2px); /* Bay nhẹ lên khi hover */
+    box-shadow: 0 4px 12px rgba(251, 139, 36, 0.3) !important;
+}
+
+/* CHỈNH LẠI MÀU CHO CHỮ GIỮ CHỖ (PLACEHOLDER) */
+.form-flat ::placeholder {
+    color: #94a3b8 !important;
+    opacity: 1;
+}
