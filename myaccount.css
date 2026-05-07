@@ -284,7 +284,7 @@ fieldset { order: 7; grid-column: 1 / span 2 !important; }
     font-family: 'Kodchasan', sans-serif !important;
     font-size: 22px !important; /* Tăng nhẹ kích thước font cho hợp với box rộng */
     font-weight: 700 !important;
-    color: #333 !important;
+    color: #000 !important;
 }
 
 /* Nút Add/Edit bên phải */
@@ -304,7 +304,7 @@ fieldset { order: 7; grid-column: 1 / span 2 !important; }
 .woocommerce-Address address {
     font-family: 'League Spartan', sans-serif !important;
     font-size: 17px !important;
-    color: #999 !important;
+    color: #333 !important;
     font-style: normal !important;
     margin-top: 15px;
 }
@@ -335,7 +335,7 @@ fieldset { order: 7; grid-column: 1 / span 2 !important; }
     font-family: 'Kodchasan', sans-serif !important;
     font-size: 15px !important;
     font-weight: 700 !important;
-    color: #333 !important;
+    color: #000 !important;
     margin-bottom: 8px !important;
     display: block !important;
     text-transform: none !important;
@@ -474,11 +474,13 @@ ul.dashboard-links li.wishlist-account-element {
 /* 1. Font title sang Kodchasan */
 .woocommerce-orders-table__header span {
     font-family: 'Kodchasan', sans-serif !important;
+	color: #000;
 }
 
 /* 2. Font body lên 16px (áp dụng cho các ô nội dung) */
 .woocommerce-orders-table__cell {
     font-size: 16px !important;
+	
 }
 
 /* 1. Tổng thể bảng - Cho thoáng đãng hơn */
@@ -495,6 +497,7 @@ ul.dashboard-links li.wishlist-account-element {
     background: transparent !important;
     border-bottom: 2px solid #f1f1f1 !important;
     padding: 15px 10px !important;
+	
 }
 
 /* 2. Style từng dòng đơn hàng */
@@ -510,23 +513,27 @@ ul.dashboard-links li.wishlist-account-element {
     padding: 20px 10px 5px  !important;
     border-bottom: 1px solid #eee !important;
     vertical-align: middle !important;
-    color: #555;
+    color: #333;
 }
 
 /* 3. Fix lỗi dính chữ ở cột Tổng (Total) */
 .woocommerce-orders-table__cell-order-total {
     font-size: 15px;
-    color: #777;
+    color: #333;
+}
+.woocommerce-orders-table__cell-order-number a {
+    color: #333 !important;
+    font-weight: 600; /* Cho đậm lên một chút nhìn cho rõ */
 }
 
 .woocommerce-orders-table__cell-order-total .amount {
-    color: #ef8c2b; /* Màu cam thương hiệu của bạn */
+    color: #FB8B24; /* Màu cam thương hiệu của bạn */
     font-weight: 700;
     font-size: 17px;
     margin-right: 4px; /* Khoảng cách với chữ 'cho x mục' */
 }
 .woocommerce-orders-table__cell-order-total .woocommerce-Price-currencySymbol {
-    color: #ef8c2b !important;
+    color: #FB8B24 !important;
 }
 
 /* 4. Custom Trạng thái (Status) cho chuyên nghiệp */
@@ -552,7 +559,48 @@ ul.dashboard-links li.wishlist-account-element {
     text-transform: none !important;
     display: inline-block;
 }
+/* Thu nhỏ Header và giãn cách lại Card cho fit */
+@media (max-width: 768px) {
+    /* 1. Thu nhỏ font title header để không bị dính lẹo */
+    .woocommerce-orders-table__header span {
+        font-size: 13px !important;
+        letter-spacing: 0px !important;
+    }
 
+    .woocommerce-orders-table__header {
+        padding: 10px 5px !important; /* Giảm padding header */
+    }
+
+    /* 2. Căn chỉnh lại Card cho bớt chật */
+    .woocommerce-orders-table__row {
+        margin: 0 5px 15px 5px !important; /* Tạo khoảng trống 2 bên card */
+        padding: 5px !important;
+    }
+
+    /* 3. Thu nhỏ label bên trái của mỗi dòng trong card */
+    .woocommerce-orders-table__cell {
+        font-size: 14px !important; /* Font nội dung nhỏ lại xíu */
+        padding: 10px 8px !important;
+    }
+
+    .woocommerce-orders-table__cell::before {
+        font-size: 13px !important;
+        min-width: 80px; /* Khống chế độ rộng label để không lấn át giá tiền */
+    }
+
+    /* 4. Chỉnh lại cột Tổng cho gọn */
+    .woocommerce-orders-table__cell-order-total .amount {
+        font-size: 15px !important;
+    }
+
+    /* 5. Nút bấm hẹp lại cho cân đối */
+    .woocommerce-orders-table__cell-order-actions .button.view {
+        padding: 6px 15px !important;
+        font-size: 14px !important;
+        width: 90%; /* Không để 100% cho đỡ thô */
+        margin: 5px auto;
+    }
+}
 
 /* --- PHẦN MỚI THÊM: RESPONSIVE CHO MỌI THIẾT BỊ --- */
 
@@ -620,6 +668,7 @@ ul.dashboard-links li.wishlist-account-element {
 }
 
 
+
 /* 2. Custom dòng thông báo đầu trang (Dùng mark) */
 
 mark.order-number, mark.order-date, mark.order-status {
@@ -650,11 +699,12 @@ padding-bottom: 15px;
     padding: 20px 0 10px 10px!important;
     border-bottom: 1px solid #eee !important;
 	font-size: 16px !important;
+
 }
 
 /* Fix màu symbol cùng màu với giá tiền */
 .amount, .woocommerce-Price-currencySymbol {
-    color: #ef8c2b !important;
+    color: #FB8B24 !important;
     font-weight: 700;
 }
 
