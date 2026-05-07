@@ -1,0 +1,44 @@
+/* --- BIẾN NÚT ADD TO CART THÀNH DẤU CỘNG VÀNG CAM XÀI ĐƯỢC --- */
+
+
+
+
+
+/* 3. Hiệu ứng khi di chuột vào nút */
+.product-small.box .add-to-cart-button:hover,
+.product-small.box .add_to_cart_button:hover {
+    background-color: #e67a1a !important;
+    transform: scale(1.1);
+}
+
+/* 4. Giữ nguyên viền bao quanh toàn bộ Card và Bo góc */
+.product-small.box {
+    border: 2px solid #f1f1f1 !important; /* Viền bao quanh ảnh và chữ */
+    border-radius: 40px !important;       /* Bo góc khung ngoài cực mạnh */
+    background-color: #ffffff !important;
+    overflow: hidden !important;
+    position: relative !important;
+    transition: all 0.3s ease;
+}
+
+/* 5. Căn chỉnh ảnh và chữ lùi vào trong viền */
+.product-small.box .box-image {
+    padding: 15px 15px 5px 15px !important;
+}
+
+.product-small.box .box-image .image-cover,
+.product-small.box .box-image img {
+    border-radius: 30px !important; /* Bo góc ảnh bên trong */
+}
+
+.product-small.box .box-text {
+    padding: 10px 25px 30px 25px !important;
+    text-align: left !important;
+}
+
+/* Xóa các icon xe hàng cũ hoặc rác của Flatsome */
+.product-small.box .wishlist-button, {
+    display: none !important;
+}
+/quickview/
+   border-radius: 0 0 30px 30px !important; /* Bo góc dưới trái và dưới phải 30px */
