@@ -602,61 +602,6 @@ ul.dashboard-links li.wishlist-account-element {
     }
 }
 
-/* --- PHẦN MỚI THÊM: RESPONSIVE CHO MỌI THIẾT BỊ --- */
-
-@media (max-width: 850px) {
-    /* Chuyển Layout từ ngang sang dọc */
-    .page-wrapper.my-account .row.vertical-tabs {
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    /* Sidebar và Content chiếm 100% chiều rộng */
-    .large-3.col.col-border, 
-    .large-9.col {
-        flex: 0 0 100% !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    /* Menu căn giữa trên mobile */
-    #my-account-nav li a {
-        width: 100% !important;
-        justify-content: center;
-        min-width: unset !important;
-    }
-
-    /* Chuyển Grid Form về 1 cột */
-    .woocommerce-EditAccountForm, 
-    .meichan-row-group, 
-    ul.dashboard-links {
-        grid-template-columns: 1fr !important;
-        gap: 15px !important;
-    }
-
-    /* Đưa các ô input chiếm hết chiều ngang */
-    .woocommerce-form-row--last:has(#account_last_name),
-    .woocommerce-form-row--first:has(#account_first_name) {
-        grid-column: 1 / span 1 !important;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Padding nhỏ lại cho điện thoại nhỏ */
-    .large-9.col {
-        padding: 20px !important;
-    }
-    
-    .gender-selection {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    ul.dashboard-links li a {
-        font-size: 14px !important;
-    }
-}
-
 /*CUSTOM ORDER TABLE*/
 .woocommerce-order-details__title, 
 .woocommerce-column__title {
@@ -666,8 +611,6 @@ ul.dashboard-links li.wishlist-account-element {
     margin-bottom: 20px;
 	 color: #FB8B24; 
 }
-
-
 
 /* 2. Custom dòng thông báo đầu trang (Dùng mark) */
 
@@ -795,8 +738,64 @@ padding-bottom: 15px;
     white-space: nowrap; /* Ép giá tiền không được xuống dòng */
 }
 
-/* Khử hoàn toàn cái ::before gây rớt dòng ở Responsive cũ của m */
+/* Khử hoàn toàn cái ::before gây rớt dòng ở Responsive cũ  */
 .shop_table.order_details td::before {
     display: none !important;
     content: none !important;
 }
+
+/* --- PHẦN MỚI THÊM: RESPONSIVE CHO MỌI THIẾT BỊ --- */
+
+@media (max-width: 850px) {
+    /* Chuyển Layout từ ngang sang dọc */
+    .page-wrapper.my-account .row.vertical-tabs {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Sidebar và Content chiếm 100% chiều rộng */
+    .large-3.col.col-border, 
+    .large-9.col {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Menu căn giữa trên mobile */
+    #my-account-nav li a {
+        width: 100% !important;
+        justify-content: center;
+        min-width: unset !important;
+    }
+
+    /* Chuyển Grid Form về 1 cột */
+    .woocommerce-EditAccountForm, 
+    .meichan-row-group, 
+    ul.dashboard-links {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    /* Đưa các ô input chiếm hết chiều ngang */
+    .woocommerce-form-row--last:has(#account_last_name),
+    .woocommerce-form-row--first:has(#account_first_name) {
+        grid-column: 1 / span 1 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Padding nhỏ lại cho điện thoại nhỏ */
+    .large-9.col {
+        padding: 20px !important;
+    }
+    
+    .gender-selection {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    ul.dashboard-links li a {
+        font-size: 14px !important;
+    }
+}
+
