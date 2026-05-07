@@ -1,0 +1,143 @@
+/* --- TRANG TRÍ TẤT CẢ CÁC LOẠI DANH MỤC & DANH SÁCH (CATALOG/NAV) --- */
+/* Áp dụng cho cả Product Categories và Layered Nav (lọc thuộc tính) */
+.widget_product_categories ul, 
+.widget_layered_nav ul,
+.widget_pages ul,
+.shop-sidebar ul {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.widget_product_categories ul li, 
+.widget_layered_nav ul li,
+.widget ul.product-categories li {
+    list-style: none !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px dashed #fcebd5 !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.widget_product_categories ul li a, 
+.widget_layered_nav ul li a,
+.widget ul.product-categories li a {
+    color: #444 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Hiệu ứng Hover chung */
+.widget_product_categories ul li:hover a, 
+.widget_layered_nav ul li:hover a {
+    color: #FF912C !important;
+    padding-left: 10px !important;
+}
+
+.widget_product_categories ul li:hover a::before, 
+.widget_layered_nav ul li:hover a::before {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+/* Số lượng sản phẩm */
+.widget_product_categories ul li .count, 
+.widget_layered_nav ul li .count {
+    background-color: #fcebd5 !important;
+    color: #FF912C !important;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+/* --- THANH LỌC GIÁ (PRICE FILTER) - ĐẢM BẢO HIỆN MỌI NƠI --- */
+
+/* Cố định hiển thị cho tất cả trạng thái của slider */
+.widget_price_filter .ui-slider,
+.price_slider_wrapper .ui-slider,
+.ui-slider-horizontal {
+    background-color: #fcebd5 !important;
+    height: 8px !important;
+    border-radius: 10px !important;
+    border: none !important;
+    margin: 15px 10px 25px 10px !important;
+    position: relative;
+}
+
+/* Thanh ngang dải màu đã chọn */
+.widget_price_filter .ui-slider .ui-slider-range,
+.price_slider_wrapper .ui-slider-range,
+.ui-slider-range.ui-widget-header {
+    background-color: #FF912C !important;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    border: 0;
+}
+
+/* Nút kéo tròn */
+.widget_price_filter .ui-slider .ui-slider-handle,
+.price_slider_wrapper .ui-slider-handle,
+.ui-slider-handle.ui-state-default {
+    background-color: #FF912C !important;
+    border: 3px solid #fff !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+    border-radius: 50% !important;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out !important;
+    outline: none !important;
+    top: -6px !important; /* Căn giữa nút kéo trên thanh ray */
+    z-index: 2;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.widget_price_filter .ui-slider .ui-slider-handle:hover,
+.price_slider_wrapper .ui-slider-handle:hover,
+.ui-slider-handle:hover {
+    transform: scale(1.2) !important;
+}
+
+/* Nút FILTER 3D */
+.widget_price_filter .price_slider_amount .button,
+.price_slider_wrapper .price_slider_amount .button,
+.widget_price_filter button.button {
+    background-color: #FF912C !important;
+    color: #fff !important;
+    border-radius: 30px !important;
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
+    border: none !important;
+    padding: 8px 25px !important;
+    font-size: 13px !important;
+    box-shadow: 0 4px 0px #e67e22 !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+}
+
+.widget_price_filter .price_slider_amount .button:hover {
+    background-color: #ffa552 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 0px #e67e22 !important;
+}
+
+/* Hiển thị giá số tiền */
+.widget_price_filter .price_label,
+.price_slider_wrapper .price_label {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #555 !important;
+    margin-top: 10px;
+}
+
+.widget_price_filter .price_label span,
+.price_slider_wrapper .price_label span {
+    color: #FF912C !important;
+    font-weight: 800 !important;
+}
