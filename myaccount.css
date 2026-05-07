@@ -188,7 +188,7 @@ ul.dashboard-links li a {
     font-family: 'Kodchasan', sans-serif !important;
     font-size: 15px !important;
     font-weight: 700 !important;
-    color: #333 !important;
+    color: #000 !important;
     margin-bottom: 8px !important;
     display: block !important;
     text-transform: none !important;
@@ -207,6 +207,8 @@ ul.dashboard-links li a {
     width: 100% !important;
     box-sizing: border-box !important;
     font-family: 'League Spartan', sans-serif !important;
+
+	
 }
 
 .woocommerce-form-row--last:has(#account_last_name) { order: 1; grid-column: 1 / 2 !important; width: 100% !important; }
@@ -220,9 +222,10 @@ ul.dashboard-links li a {
     grid-template-columns: 1fr 1fr !important; 
     gap: 30px !important;
     width: 100% !important;
+	
 }
 
-.meichan-row-group p { width: 100% !important; }
+.meichan-row-group p { width: 100% !important;  }
 .woocommerce-form-row--wide:has(#account_email) { order: 5; grid-column: 1 / span 2 !important; }
 .meichan-gender-group { order: 6; grid-column: 1 / span 2 !important; }
 
