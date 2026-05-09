@@ -1,0 +1,107 @@
+/* --- CUSTOM WISHLIST --- */
+body, .wishlist_table, .entry-content {
+    font-size: 16px !important;
+    color: #333 !important;
+}
+/* Đổi "My wishlist" thành "Danh sách yêu thích của tôi" */
+.wishlist-title h2 {
+    font-size: 0 !important;
+}
+.wishlist-title h2::before {
+    content: "Danh sách yêu thích";
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: inline-block;
+	text-transform: uppercase;
+}
+/*ẨN TITLE WISHLIST*/
+.entry-header.text-center {
+    display: none !important;
+}
+
+/* 7. Ẩn phần Share mạng xã hội (như bạn yêu cầu trước đó) */
+.yith-wcwl-share {
+    display: none !important;
+}
+
+/* --- 2. VIỆT HÓA CÁC TIÊU ĐỀ CỘT (TABLE HEAD) --- */
+.wishlist_table thead th span::before {
+    color: #000;
+    font-size: 16px;
+}
+.wishlist_table thead th.product-name span { font-size: 0 !important; }
+.wishlist_table thead th.product-name span::before { content: "TÊN SẢN PHẨM"; font-size: 16px; }
+
+.wishlist_table thead th.product-price span { font-size: 0 !important; }
+.wishlist_table thead th.product-price span::before { content: "GIÁ ĐƠN VỊ"; font-size: 16px; }
+
+.wishlist_table thead th.product-stock-status span { font-size: 0 !important; }
+.wishlist_table thead th.product-stock-status span::before { content: "TÌNH TRẠNG"; font-size: 16px; }
+
+/* --- 3. HIỆN LẠI NÚT XÓA (BUTTON X) --- */
+/* Đảm bảo nút xóa không bị ảnh hưởng bởi font-size: 0 */
+.wishlist_table td.product-remove a.remove_from_wishlist {
+    font-size: 18px !important; /* Hiện lại dấu X */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #ccc !important;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+}
+
+.wishlist_table td.product-remove a.remove_from_wishlist:hover {
+    color: #f15a24 !important;
+    border-color: #f15a24;
+}
+
+/* --- 4. VIỆT HÓA TRẠNG THÁI & NÚT BẤM --- */
+/* Tình trạng kho */
+.wishlist-in-stock {
+    font-size: 0 !important;
+    color: #2ecc71 !important;
+}
+.wishlist-in-stock::before {
+    content: "Còn hàng";
+    font-size: 16px;
+	font-weight: bold;
+}
+
+/* Nút Thêm vào giỏ */
+.add_to_cart.alt {
+    font-size: 0 !important;
+    background-color: #fb8b24 !important;
+    padding: 10px 15px !important;
+    border-radius: 30px;
+    display: inline-block;
+}
+.add_to_cart.alt::before {
+    content: "THÊM VÀO GIỎ";
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.wishlist_table {
+    border-collapse: collapse;
+}
+
+.wishlist_table tr td {
+    padding: 20px 10px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+
+.product-name a {
+    color: #333 !important;
+     font-size: 16px;
+}
+
+.woocommerce-Price-amount {
+    color: #fb8b24 !important;
+    font-weight: bold;
+}
