@@ -1,0 +1,50 @@
+/* --- CHỈ TÁC ĐỘNG KHU VỰC TẠO TÀI KHOẢN TRONG THANH TOÁN --- */
+
+
+/* Checkbox "Tạo tài khoản mới?" */
+#customer_details .woocommerce-account-fields .create-account.form-row {
+    margin-bottom: 20px !important;
+}
+
+#customer_details .woocommerce-account-fields label.checkbox {
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #333; 
+}
+
+/* Các ô Input Username & Password bên trong */
+#customer_details .woocommerce-account-fields .create-account .form-row {
+    width: 100% !important;
+    float: none !important;
+    margin-bottom: 20px !important;
+}
+
+/* Nhãn (Label) cho Username/Password */
+#customer_details .woocommerce-account-fields label:not(.checkbox) {
+    display: block !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+    padding-left: 15px !important;
+    color: #333 !important;
+}
+
+/* Bo tròn 30px cho ô Input cụ thể trong mục này */
+#customer_details .woocommerce-account-fields .input-text {
+    width: 100% !important;
+    height: 50px !important;
+    padding: 0 25px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 30px !important; /* Bo tròn 30px đúng ý bạn */
+    font-size: 16px !important;
+    background-color: #fff !important;
+    box-sizing: border-box !important;
+}
+
+
+/* Căn chỉnh con mắt hiện mật khẩu cho khớp góc bo */
+#customer_details .woocommerce-account-fields .show-password-input {
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
