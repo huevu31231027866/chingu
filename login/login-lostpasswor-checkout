@@ -1,0 +1,108 @@
+/* --- FORM ĐĂNG NHẬP TẠI TRANG THANH TOÁN --- */
+.woocommerce-checkout .woocommerce-form-login {
+    max-width: 500px; 
+    margin: 20px auto;
+    padding: 35px !important;
+    border: 1px solid #ececec;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.woocommerce-checkout .woocommerce-form-login .form-row {
+    width: 100% !important;
+    float: none !important;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.woocommerce-checkout .woocommerce-form-login label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    padding-left: 10px;
+}
+
+.woocommerce-checkout .woocommerce-form-login .input-text {
+    width: 100% !important;
+    height: 55px; 
+    padding: 0 25px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.woocommerce-checkout .woocommerce-form-login__submit {
+    width: 100% !important;
+    padding: 15px !important; 
+    background-color: #446084 !important;
+    color: #fff !important;
+    border: 2px solid #446084 !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.woocommerce-checkout .woocommerce-form-login__submit:hover {
+    background-color: transparent !important;
+    color: #446084 !important;
+}
+/* --- FORM QUÊN MẬT KHẨU --- */
+.woocommerce-lost-password .woocommerce-ResetPassword.lost_reset_password {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 35px !important;
+    border: 1px solid #ececec;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.woocommerce-lost-password .woocommerce-ResetPassword p:first-child {
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 16px;
+}
+
+.woocommerce-lost-password .woocommerce-ResetPassword .input-text {
+    width: 100% !important;
+    height: 55px;
+    padding: 0 25px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 30px !important;
+    font-size: 16px !important;
+}
+
+.woocommerce-lost-password .woocommerce-ResetPassword .button {
+    width: 100% !important;
+    padding: 15px !important;
+    background-color: #446084 !important;
+    color: #fff !important;
+    border: 2px solid #446084 !important;
+    border-radius: 30px !important;
+    font-size: 16px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.woocommerce-lost-password .woocommerce-ResetPassword .button:hover {
+    background-color: transparent !important;
+    color: #446084 !important;
+}
+/* --- HỖ TRỢ DI ĐỘNG (RESPONSIVE) --- */
+@media screen and (max-width: 768px) {
+    .woocommerce-checkout .woocommerce-form-login,
+    .woocommerce-lost-password .woocommerce-ResetPassword.lost_reset_password {
+        max-width: 95% !important;
+        border-radius: 20px !important;
+        padding: 20px !important;
+    }
+}
